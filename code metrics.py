@@ -7,22 +7,20 @@ from radon.complexity import cc_visit
 from radon.raw import analyze
 from pathlib import Path
 
-# Initialize lib2to3 converter
 fixers = refactor.get_fixers_from_package('lib2to3.fixes')
 converter = refactor.RefactoringTool(fixers)
 
+patterns = ['TODO', 'FIXME', 'HACK', 'XXX', 'BUG']
 
 def convert_py2_to_py3(code):
-    """Convert Python 2 code to Python 3 syntax"""
     try:
         return str(converter.refactor_string(code + '\n', '<string>'))
-    except:
+    except Exception:
         return None
 
 
 def find_tech_debt_markers(code):
-    """Count TODO, FIXME, HACK, XXX comments"""
-    patterns = ['TODO', 'FIXME', 'HACK', 'XXX', 'BUG']
+
     counts = {pattern: 0 for pattern in patterns}
 
     for line in code.split('\n'):
@@ -69,7 +67,6 @@ def analyze_library_version(version_dir):
             total_sloc += raw_metrics.sloc
             total_comments += raw_metrics.comments
 
-            # Tech debt markers
             markers = find_tech_debt_markers(code)
             for key in tech_debt_markers:
                 tech_debt_markers[key] += markers[key]
@@ -84,9 +81,7 @@ def analyze_library_version(version_dir):
         'total_loc': total_loc,
         'total_sloc': total_sloc,
         'total_comments': total_comments,
-        'comment_ratio': round(total_comments / total_sloc * 100, 2) if total_sloc > 0 else 0,
         'tech_debt_markers': tech_debt_markers,
-        'total_markers': sum(tech_debt_markers.values()),
         'files_analyzed': len(all_mi),
         'files_skipped': skipped
     }
@@ -107,9 +102,7 @@ for library in os.listdir(LIBRARY_DIR):
             **metrics
         })
 
-# Save to JSON
 with open("maintainability_results.json", "w") as f:
     json.dump(all_results, f, indent=2)
 
-print(f"\nResults saved to maintainability_results.json")
 print(f"Total records: {len(all_results)}")

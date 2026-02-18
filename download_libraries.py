@@ -10,10 +10,8 @@ import tarfile
 import shutil
 
 def parse_version(version):
-    """Parse version string, extracting numeric parts and handling pre-release suffixes"""
     parts = []
     for part in version.split('.'):
-        # Extract leading digits only
         match = re.match(r'(\d+)', part)
         parts.append(int(match.group(1)) if match else 0)
     return parts
@@ -22,25 +20,23 @@ def download_major_releases(package, output_dir="./library-versions"):
     output_dir = f"{output_dir}/{package}"
     Path(output_dir).mkdir(exist_ok=True, parents=True)
 
-    # Fetch all versions from PyPI
     response = requests.get(f"https://pypi.org/pypi/{package}/json")
     releases = response.json()["releases"]
 
-    # Group versions by major
     major_versions = {}
     for v in releases.keys():
         if not releases[v]:
             continue
-        major = v.split('.')[0].split('-')[0]  # Handle X-a format
+        major = v.split('.')[0].split('-')[0]
         major = re.match(r'(\d+)', major)
         if not major:
             continue
+        # this will get the first major version it finds
         major = major.group(1)
         if major not in major_versions:
             major_versions[major] = []
         major_versions[major].append(v)
 
-    # Download and extract
     for major, versions in sorted(major_versions.items()):
         sorted_versions = sorted(versions, key=parse_version)
 
@@ -57,20 +53,20 @@ def download_major_releases(package, output_dir="./library-versions"):
             ], capture_output=True, text=True)
 
             if result.returncode == 0:
-                print(f"✓ Downloaded {version}")
+                print(f"Downloaded {version}")
 
-                # Extract
                 for file in version_dir.glob("*"):
+                    # unzip wheel
                     if file.suffix == ".whl":
                         with zipfile.ZipFile(file, 'r') as zip_ref:
                             zip_ref.extractall(version_dir)
                         os.remove(file)
+                    # unzip tar
                     elif file.suffix in [".gz", ".bz2"]:
                         with tarfile.open(file, 'r:*') as tar_ref:
                             tar_ref.extractall(version_dir)
                         os.remove(file)
 
-                # Remove .dist-info directories
                 for dist_info in version_dir.glob("*.dist-info"):
                     shutil.rmtree(dist_info)
 
@@ -83,7 +79,10 @@ def download_major_releases(package, output_dir="./library-versions"):
             print(f"✗ No downloadable version found for major {major}")
 
 targets = ["marshmallow",
-           "pydantic", "click", "python-dateutil", "requests"
+           "pydantic",
+           "click",
+           "python-dateutil",
+           "requests"
            ]
 
 for target in targets:
