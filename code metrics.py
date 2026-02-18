@@ -7,10 +7,14 @@ from radon.complexity import cc_visit
 from radon.raw import analyze
 from pathlib import Path
 
+# needed for lib2 to 3 transformation
+# some of the libraries are in python2
 fixers = refactor.get_fixers_from_package('lib2to3.fixes')
 converter = refactor.RefactoringTool(fixers)
 
 patterns = ['TODO', 'FIXME', 'HACK', 'XXX', 'BUG']
+LIBRARY_DIR = "./library-versions"
+all_results = []
 
 def convert_py2_to_py3(code):
     try:
@@ -18,18 +22,13 @@ def convert_py2_to_py3(code):
     except Exception:
         return None
 
-
 def find_tech_debt_markers(code):
-
     counts = {pattern: 0 for pattern in patterns}
-
     for line in code.split('\n'):
         for pattern in patterns:
             if re.search(rf'#.*\b{pattern}\b', line, re.IGNORECASE):
                 counts[pattern] += 1
-
     return counts
-
 
 def analyze_library_version(version_dir):
     all_mi = []
@@ -37,7 +36,7 @@ def analyze_library_version(version_dir):
     total_loc = 0
     total_sloc = 0
     total_comments = 0
-    tech_debt_markers = {pattern: 0 for pattern in ['TODO', 'FIXME', 'HACK', 'XXX', 'BUG']}
+    tech_debt_markers = {pattern: 0 for pattern in patterns}
     skipped = 0
 
     for py_file in Path(version_dir).rglob("*.py"):
@@ -85,10 +84,6 @@ def analyze_library_version(version_dir):
         'files_analyzed': len(all_mi),
         'files_skipped': skipped
     }
-
-
-LIBRARY_DIR = "./library-versions"
-all_results = []
 
 for library in os.listdir(LIBRARY_DIR):
     library_dir_versions = f"{LIBRARY_DIR}/{library}"
