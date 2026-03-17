@@ -1,0 +1,51 @@
+/// Original notes
+Requests
+- Create error objects from v1 to v2
+- Break v1 send method into the different methods found sessions.py
+- Recreate base class __init__ of Response under models.py with added raw encoding url history cookies and reason
+- Create status codes missing and v0
+- CaseInsensitiveDict utils in structures.py v1 to v2
+- cert_verify in adapters.py refactor from v1 to v2
+
+Pydantic
+- Implement the dict() method from v0 to v1 of the BaseModel class
+- Rewrite the following helper methods v1 to v2 inder types conbytes, conlist, constr,
+- Rewrite PydanticErrorMixin from v1 to v2 to make it more explicit
+- Simplify all the classes from UrlConstraints in v2 (networks.py)
+- Consider some of the validation logic in networks.py
+
+Prompt templates
+
+Requests
+1. Create error objects from v0 to v1
+   Define a base exception class and build a hierarchy of specific HTTP error types beneath it.
+2. Break v0 send() into session methods (v1)
+   Split the single send() method into separate methods for preparation, sending, and redirect handling.
+3. Recreate Response.__init__ from v0 to v1
+   Start with a basic response object and add support for raw data, encoding, url, history, cookies and reason.
+4. Create status codes from v0 to v1
+   Build a lookup structure that maps numeric HTTP codes to human readable names with multiple aliases.
+5. CaseInsensitiveDict in structures.py from v1 to v2
+   Implement a dictionary that treats keys as equal regardless of their casing.
+6. cert_verify() in adapters.py from v1 to v2
+   Refactor SSL certificate verification to support custom CA bundles and client certificates.
+
+
+Pydantic
+1. Implement BaseModel.dict() from v0 to v1
+   Start from a basic attribute dump and evolve it to support include, exclude, aliases and nested model serialization.
+2. Rewrite conbytes, conlist, constr from v1 to v2
+   Replace the constraint helper functions with a type annotation approach using explicit constraint classes.
+3. Rewrite PydanticErrorMixin from v1 to v2
+   Replace implicit error message formatting with explicit error codes and structured message templates.
+4. Simplify UrlConstraints classes in networks.py (v2)
+   Consolidate the URL type hierarchy into a single configurable class using constraint parameters.
+5. Validation logic in networks.py
+   Implement URL and email validation by breaking the process into scheme, host, path and query validation steps,
+   then evolve it to use stricter parsing and error reporting.
+
+
+
+As a software developer, I want to rewrite the following function/module starting
+with the given first iteration of the code and update it based on the following requirements.
+{Request template}
