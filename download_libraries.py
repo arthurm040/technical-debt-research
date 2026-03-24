@@ -9,12 +9,14 @@ import zipfile
 import tarfile
 import shutil
 
+
 def parse_version(version):
     parts = []
-    for part in version.split('.'):
-        match = re.match(r'(\d+)', part)
+    for part in version.split("."):
+        match = re.match(r"(\d+)", part)
         parts.append(int(match.group(1)) if match else 0)
     return parts
+
 
 def download_major_releases(package, output_dir="./library-versions"):
     output_dir = f"{output_dir}/{package}"
@@ -27,8 +29,8 @@ def download_major_releases(package, output_dir="./library-versions"):
     for v in releases.keys():
         if not releases[v]:
             continue
-        major = v.split('.')[0].split('-')[0]
-        major = re.match(r'(\d+)', major)
+        major = v.split(".")[0].split("-")[0]
+        major = re.match(r"(\d+)", major)
         if not major:
             continue
         # this will get the first major version it finds
@@ -45,12 +47,22 @@ def download_major_releases(package, output_dir="./library-versions"):
             version_dir = Path(output_dir) / version
             version_dir.mkdir(exist_ok=True)
 
-            result = subprocess.run([
-                "pip", "download", f"{package}=={version}",
-                "--dest", version_dir, "--no-deps",
-                "--python-version", "3.12",
-                "--platform", "any"
-            ], capture_output=True, text=True)
+            result = subprocess.run(
+                [
+                    "pip",
+                    "download",
+                    f"{package}=={version}",
+                    "--dest",
+                    version_dir,
+                    "--no-deps",
+                    "--python-version",
+                    "3.12",
+                    "--platform",
+                    "any",
+                ],
+                capture_output=True,
+                text=True,
+            )
 
             if result.returncode == 0:
                 print(f"Downloaded {version}")
@@ -58,12 +70,12 @@ def download_major_releases(package, output_dir="./library-versions"):
                 for file in version_dir.glob("*"):
                     # unzip wheel
                     if file.suffix == ".whl":
-                        with zipfile.ZipFile(file, 'r') as zip_ref:
+                        with zipfile.ZipFile(file, "r") as zip_ref:
                             zip_ref.extractall(version_dir)
                         os.remove(file)
                     # unzip tar
                     elif file.suffix in [".gz", ".bz2"]:
-                        with tarfile.open(file, 'r:*') as tar_ref:
+                        with tarfile.open(file, "r:*") as tar_ref:
                             tar_ref.extractall(version_dir)
                         os.remove(file)
 
@@ -78,12 +90,8 @@ def download_major_releases(package, output_dir="./library-versions"):
         if not success:
             print(f"✗ No downloadable version found for major {major}")
 
-targets = ["marshmallow",
-           "pydantic",
-           "click",
-           "python-dateutil",
-           "requests"
-           ]
+
+targets = ["marshmallow", "pydantic", "click", "python-dateutil", "requests"]
 
 for target in targets:
     print(target)

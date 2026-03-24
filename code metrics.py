@@ -9,26 +9,29 @@ from pathlib import Path
 
 # needed for lib2 to 3 transformation
 # some of the libraries are in python2
-fixers = refactor.get_fixers_from_package('lib2to3.fixes')
+fixers = refactor.get_fixers_from_package("lib2to3.fixes")
 converter = refactor.RefactoringTool(fixers)
 
-patterns = ['TODO', 'FIXME', 'HACK', 'XXX', 'BUG']
+patterns = ["TODO", "FIXME", "HACK", "XXX", "BUG"]
 LIBRARY_DIR = "./library-versions"
 all_results = []
 
+
 def convert_py2_to_py3(code):
     try:
-        return str(converter.refactor_string(code + '\n', '<string>'))
+        return str(converter.refactor_string(code + "\n", "<string>"))
     except Exception:
         return None
 
+
 def find_tech_debt_markers(code):
     counts = {pattern: 0 for pattern in patterns}
-    for line in code.split('\n'):
+    for line in code.split("\n"):
         for pattern in patterns:
-            if re.search(rf'#.*\b{pattern}\b', line, re.IGNORECASE):
+            if re.search(rf"#.*\b{pattern}\b", line, re.IGNORECASE):
                 counts[pattern] += 1
     return counts
+
 
 def analyze_library_version(version_dir):
     all_mi = []
@@ -41,7 +44,7 @@ def analyze_library_version(version_dir):
 
     for py_file in Path(version_dir).rglob("*.py"):
         try:
-            with open(py_file, encoding='utf-8', errors='ignore') as f:
+            with open(py_file, encoding="utf-8", errors="ignore") as f:
                 code = f.read()
 
             # Try to analyze as-is first
@@ -74,16 +77,17 @@ def analyze_library_version(version_dir):
             skipped += 1
 
     return {
-        'avg_maintainability': round(sum(all_mi) / len(all_mi), 2) if all_mi else 0,
-        'avg_complexity': round(sum(all_complexity) / len(all_complexity), 2) if all_complexity else 0,
-        'max_complexity': max(all_complexity) if all_complexity else 0,
-        'total_loc': total_loc,
-        'total_sloc': total_sloc,
-        'total_comments': total_comments,
-        'tech_debt_markers': tech_debt_markers,
-        'files_analyzed': len(all_mi),
-        'files_skipped': skipped
+        "avg_maintainability": round(sum(all_mi) / len(all_mi), 2) if all_mi else 0,
+        "avg_complexity": round(sum(all_complexity) / len(all_complexity), 2) if all_complexity else 0,
+        "max_complexity": max(all_complexity) if all_complexity else 0,
+        "total_loc": total_loc,
+        "total_sloc": total_sloc,
+        "total_comments": total_comments,
+        "tech_debt_markers": tech_debt_markers,
+        "files_analyzed": len(all_mi),
+        "files_skipped": skipped,
     }
+
 
 for library in os.listdir(LIBRARY_DIR):
     library_dir_versions = f"{LIBRARY_DIR}/{library}"
@@ -91,11 +95,7 @@ for library in os.listdir(LIBRARY_DIR):
         print(f"Analyzing {library} {version}")
         metrics = analyze_library_version(f"{library_dir_versions}/{version}")
 
-        all_results.append({
-            "library": library,
-            "version": version,
-            **metrics
-        })
+        all_results.append({"library": library, "version": version, **metrics})
 
 with open("maintainability_results.json", "w") as f:
     json.dump(all_results, f, indent=2)

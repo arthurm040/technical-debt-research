@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
+pysonar = "*"
 
 [dev-packages]
 ruff = "*"
@@ -15,5 +16,4 @@ invoke = "*"
 lint = "invoke lint"
 
 [requires]
-python_version = "3.8"
-#python_full_version = "3.8.10"
+python_version = "3.12"
