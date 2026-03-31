@@ -1,87 +1,12 @@
+import json
 import os
 import re
-import json
 import time
-import subprocess
-import requests
 
-BASE_URL = "http://localhost:9000"
-TOKEN = "squ_fc30c47f173ad8a70cfe955bfdbe05f2c2e3e7f5"
-HEADERS = {"Authorization": f"Bearer {TOKEN}"}
+from utils import create_project, is_digit_dot_regex, run_scanner, get_all_issues
 
 seen_set = set()
 all_issues = {}
-
-
-def project_exists(project_key):
-    response = requests.get(f"{BASE_URL}/api/projects/search", params={"projects": project_key}, headers=HEADERS)
-    return len(response.json()["components"]) > 0
-
-
-def create_project(name, project_key):
-    if not project_exists(project_key):
-        requests.post(
-            f"{BASE_URL}/api/projects/create",
-            params={"name": name, "project": project_key, "newCodeDefinitionType": "PREVIOUS_VERSION"},
-            headers=HEADERS,
-        )
-        print(f"Created {project_key}")
-
-
-def run_scanner(project_key, src_path, version_):
-    env = os.environ.copy()
-    env["PIPENV_VERBOSITY"] = "-1"
-    subprocess.run(
-        [
-            "pipenv",
-            "run",
-            "pysonar",
-            f"--sonar-host-url={BASE_URL}",
-            f"--sonar-token={TOKEN}",
-            f"--sonar-project-key={project_key}",
-            f"--sonar-sources={src_path}",
-            f"--sonar-project-version={version_}",
-            "-Dsonar.scm.disabled=true",
-        ],
-        env=env,
-    )
-
-
-def get_all_issues(project_key):
-    issues_by_file = {}
-    page = 1
-    while True:
-        response = requests.get(
-            f"{BASE_URL}/api/issues/search",
-            params={"componentKeys": project_key, "types": "CODE_SMELL,BUG,VULNERABILITY", "ps": 500, "p": page},
-            headers=HEADERS,
-        ).json()
-
-        for issue in response["issues"]:
-            file_path = issue["component"].replace(f"{project_key}:", "")
-            if file_path not in issues_by_file:
-                issues_by_file[file_path] = []
-            issues_by_file[file_path].append(
-                {
-                    "rule": issue["rule"],
-                    "rule_name": issue.get("ruleName"),
-                    "severity": issue["severity"],
-                    "type": issue["type"],
-                    "line": issue.get("line"),
-                    "message": issue["message"],
-                    "tags": issue.get("tags", []),
-                }
-            )
-
-        if page * 500 >= response["total"]:
-            break
-        page += 1
-
-    return issues_by_file
-
-
-def is_digit_dot_regex(s):
-    return bool(re.match(r"^\d+(\.\d+)*$", s))
 
 
 for root, dirs, files in os.walk("./library-versions", topdown=True):

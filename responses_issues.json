@@ -1,0 +1,221 @@
+{
+  "responses/pydantic_01.py": [
+    {
+      "rule": "python:S3776",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 31,
+      "message": "Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+      "tags": [
+        "brain-overload"
+      ]
+    }
+  ],
+  "responses/pydantic_04.py": [
+    {
+      "rule": "python:S3776",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 158,
+      "message": "Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+      "tags": [
+        "brain-overload"
+      ]
+    }
+  ],
+  "responses/pydantic_05.py": [
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 294,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    },
+    {
+      "rule": "python:S1192",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 309,
+      "message": "Define a constant instead of duplicating this literal \"email-validator is not installed, run `pip install pydantic[email]`\" 3 times.",
+      "tags": [
+        "design"
+      ]
+    }
+  ],
+  "responses/requests_01.py": [
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 79,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    },
+    {
+      "rule": "python:S5806",
+      "rule_name": null,
+      "severity": "MAJOR",
+      "type": "CODE_SMELL",
+      "line": 89,
+      "message": "Rename this variable; it shadows a builtin.",
+      "tags": [
+        "bad-practice",
+        "confusing",
+        "pitfall"
+      ]
+    },
+    {
+      "rule": "python:S5754",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 90,
+      "message": "Specify an exception class to catch or reraise the exception",
+      "tags": [
+        "error-handling",
+        "bad-practice",
+        "suspicious"
+      ]
+    },
+    {
+      "rule": "python:S1066",
+      "rule_name": null,
+      "severity": "MAJOR",
+      "type": "CODE_SMELL",
+      "line": 96,
+      "message": "Merge this if statement with the enclosing one.",
+      "tags": [
+        "clumsy"
+      ]
+    },
+    {
+      "rule": "python:S1940",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 96,
+      "message": "Use the opposite operator (\"not in\") instead.",
+      "tags": [
+        "pitfall"
+      ]
+    },
+    {
+      "rule": "python:S3776",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 117,
+      "message": "Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.",
+      "tags": [
+        "brain-overload"
+      ]
+    },
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 167,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    },
+    {
+      "rule": "python:S5806",
+      "rule_name": null,
+      "severity": "MAJOR",
+      "type": "CODE_SMELL",
+      "line": 171,
+      "message": "Rename this variable; it shadows a builtin.",
+      "tags": [
+        "bad-practice",
+        "confusing",
+        "pitfall"
+      ]
+    },
+    {
+      "rule": "python:S5754",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 172,
+      "message": "Specify an exception class to catch or reraise the exception",
+      "tags": [
+        "error-handling",
+        "bad-practice",
+        "suspicious"
+      ]
+    },
+    {
+      "rule": "python:S1172",
+      "rule_name": null,
+      "severity": "MAJOR",
+      "type": "CODE_SMELL",
+      "line": 212,
+      "message": "Remove the unused function parameter \"params\".",
+      "tags": [
+        "unused"
+      ]
+    }
+  ],
+  "responses/requests_02.py": [
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 18,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    }
+  ],
+  "responses/requests_03.py": [
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 27,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    },
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 94,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    }
+  ],
+  "responses/requests_05.py": [
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 34,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    }
+  ],
+  "responses/requests_06.py": [
+    {
+      "rule": "python:S3776",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 1,
+      "message": "Refactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.",
+      "tags": [
+        "brain-overload"
+      ]
+    }
+  ]
+}

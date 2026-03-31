@@ -67,5 +67,5 @@ def write_prompts(prefix, prompt_array, out_dir):
             f.write(content)
 
 
-write_prompts("requests", REQUESTS_PROMPT_ARRAY, "prompts_")
-write_prompts("pydantic", PYDANTIC_PROMPT_ARRAY, "prompts_")
+# write_prompts("requests", REQUESTS_PROMPT_ARRAY, "prompts_")
+# write_prompts("pydantic", PYDANTIC_PROMPT_ARRAY, "prompts_")

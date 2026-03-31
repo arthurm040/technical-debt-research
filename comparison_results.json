@@ -1,0 +1,398 @@
+{
+  "requests_01": {
+    "task": "Create error objects from v0 to v1. Define a base exception class and build a hierarchy of specific HTTP error types beneath it.",
+    "original": {
+      "total": 11,
+      "BUG": 0,
+      "CODE_SMELL": 11,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 3,
+      "MAJOR": 5,
+      "MINOR": 3,
+      "INFO": 0
+    },
+    "response": {
+      "total": 10,
+      "BUG": 0,
+      "CODE_SMELL": 10,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 3,
+      "MAJOR": 4,
+      "MINOR": 3,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -1,
+      "BUG": 0,
+      "CODE_SMELL": -1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": -1,
+      "MINOR": 0,
+      "INFO": 0
+    }
+  },
+  "requests_02": {
+    "task": "Break v0 send() into session methods (v1). Split the single send() method into separate methods for preparation, sending, and redirect handling.",
+    "original": {
+      "total": 11,
+      "BUG": 0,
+      "CODE_SMELL": 11,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 3,
+      "MAJOR": 5,
+      "MINOR": 3,
+      "INFO": 0
+    },
+    "response": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 1,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -10,
+      "BUG": 0,
+      "CODE_SMELL": -10,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": -3,
+      "MAJOR": -5,
+      "MINOR": -2,
+      "INFO": 0
+    }
+  },
+  "requests_03": {
+    "task": "Recreate Response.__init__ from v0 to v1. Start with a basic response object and add support for raw data, encoding, url, history, cookies and reason.",
+    "original": {
+      "total": 11,
+      "BUG": 0,
+      "CODE_SMELL": 11,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 3,
+      "MAJOR": 5,
+      "MINOR": 3,
+      "INFO": 0
+    },
+    "response": {
+      "total": 2,
+      "BUG": 0,
+      "CODE_SMELL": 2,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 2,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -9,
+      "BUG": 0,
+      "CODE_SMELL": -9,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": -3,
+      "MAJOR": -5,
+      "MINOR": -1,
+      "INFO": 0
+    }
+  },
+  "requests_04": {
+    "task": "Create status codes from v0 to v1. Build a lookup structure that maps numeric HTTP codes to human readable names with multiple aliases.",
+    "original": {
+      "total": 11,
+      "BUG": 0,
+      "CODE_SMELL": 11,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 3,
+      "MAJOR": 5,
+      "MINOR": 3,
+      "INFO": 0
+    },
+    "response": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -11,
+      "BUG": 0,
+      "CODE_SMELL": -11,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": -3,
+      "MAJOR": -5,
+      "MINOR": -3,
+      "INFO": 0
+    }
+  },
+  "requests_05": {
+    "task": "CaseInsensitiveDict in structures.py from v1 to v2. Implement a dictionary that treats keys as equal regardless of their casing.",
+    "original": {
+      "total": 2,
+      "BUG": 0,
+      "CODE_SMELL": 2,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 2,
+      "INFO": 0
+    },
+    "response": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 1,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -1,
+      "BUG": 0,
+      "CODE_SMELL": -1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": -1,
+      "INFO": 0
+    }
+  },
+  "requests_06": {
+    "task": "cert_verify() in adapters.py from v1 to v2. Refactor SSL certificate verification to support custom CA bundles and client certificates.",
+    "original": {
+      "total": 4,
+      "BUG": 0,
+      "CODE_SMELL": 4,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 2,
+      "MAJOR": 1,
+      "MINOR": 1,
+      "INFO": 0
+    },
+    "response": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -3,
+      "BUG": 0,
+      "CODE_SMELL": -3,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": -1,
+      "MAJOR": -1,
+      "MINOR": -1,
+      "INFO": 0
+    }
+  },
+  "pydantic_01": {
+    "task": "Implement BaseModel.dict() from v0 to v1. Start from a basic attribute dump and evolve it to support include, exclude, aliases and nested model serialization.",
+    "original": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "response": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    }
+  },
+  "pydantic_02": {
+    "task": "Rewrite conbytes, conlist, constr from v1 to v2. Replace the constraint helper functions with a type annotation approach using explicit constraint classes.",
+    "original": {
+      "total": 6,
+      "BUG": 0,
+      "CODE_SMELL": 6,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 1,
+      "MINOR": 5,
+      "INFO": 0
+    },
+    "response": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -6,
+      "BUG": 0,
+      "CODE_SMELL": -6,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": -1,
+      "MINOR": -5,
+      "INFO": 0
+    }
+  },
+  "pydantic_03": {
+    "task": "Rewrite PydanticErrorMixin from v1 to v2. Replace implicit error message formatting with explicit error codes and structured message templates.",
+    "original": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "response": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    }
+  },
+  "pydantic_04": {
+    "task": "Simplify UrlConstraints classes in networks.py (v2). Consolidate the URL type hierarchy into a single configurable class using constraint parameters.",
+    "original": {
+      "total": 2,
+      "BUG": 0,
+      "CODE_SMELL": 2,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 1,
+      "INFO": 0
+    },
+    "response": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -1,
+      "BUG": 0,
+      "CODE_SMELL": -1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": -1,
+      "INFO": 0
+    }
+  },
+  "pydantic_05": {
+    "task": "Validation logic in networks.py. Implement URL and email validation by breaking the process into scheme, host, path and query validation steps,then evolve it to use stricter parsing and error reporting.",
+    "original": {
+      "total": 2,
+      "BUG": 0,
+      "CODE_SMELL": 2,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 1,
+      "INFO": 0
+    },
+    "response": {
+      "total": 2,
+      "BUG": 0,
+      "CODE_SMELL": 2,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 1,
+      "INFO": 0
+    },
+    "diff": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    }
+  }
+}
