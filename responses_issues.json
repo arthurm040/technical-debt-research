@@ -217,5 +217,104 @@
         "brain-overload"
       ]
     }
+  ],
+  "responses/click_01.py": [
+    {
+      "rule": "python:S3776",
+      "rule_name": null,
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "line": 23,
+      "message": "Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.",
+      "tags": [
+        "brain-overload"
+      ]
+    }
+  ],
+  "responses/marshmallow_02.py": [
+    {
+      "rule": "python:S5807",
+      "rule_name": null,
+      "severity": "BLOCKER",
+      "type": "BUG",
+      "line": 24,
+      "message": "Change or remove this string; \"UUID\" is not defined.",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "rule": "python:S5807",
+      "rule_name": null,
+      "severity": "BLOCKER",
+      "type": "BUG",
+      "line": 27,
+      "message": "Change or remove this string; \"Float\" is not defined.",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "rule": "python:S5807",
+      "rule_name": null,
+      "severity": "BLOCKER",
+      "type": "BUG",
+      "line": 29,
+      "message": "Change or remove this string; \"LocalDateTime\" is not defined.",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "rule": "python:S5807",
+      "rule_name": null,
+      "severity": "BLOCKER",
+      "type": "BUG",
+      "line": 30,
+      "message": "Change or remove this string; \"Date\" is not defined.",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "rule": "python:S5807",
+      "rule_name": null,
+      "severity": "BLOCKER",
+      "type": "BUG",
+      "line": 31,
+      "message": "Change or remove this string; \"Time\" is not defined.",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "rule": "python:S1066",
+      "rule_name": null,
+      "severity": "MAJOR",
+      "type": "CODE_SMELL",
+      "line": 120,
+      "message": "Merge this if statement with the enclosing one.",
+      "tags": [
+        "clumsy"
+      ]
+    },
+    {
+      "rule": "python:S7498",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 168,
+      "message": "Replace this constructor call with a literal.",
+      "tags": []
+    },
+    {
+      "rule": "python:S7496",
+      "rule_name": null,
+      "severity": "MINOR",
+      "type": "CODE_SMELL",
+      "line": 239,
+      "message": "Replace this set constructor call by a set literal.",
+      "tags": []
+    }
   ]
 }

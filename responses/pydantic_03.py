@@ -1,6 +1,5 @@
-from decimal import Decimal
 from pathlib import Path
-from typing import Any, Dict, Optional, Set, Union
+from typing import Any, Dict, Set
 
 from .typing import AnyType, display_as_type
 
@@ -13,8 +12,7 @@ __all__ = (
 
 
 class PydanticErrorMixin:
-    """
-    Pydantic V2 style error mixin.
+    """Pydantic V2 style error mixin.
     Uses explicit code (type) and message templates.
     """
 

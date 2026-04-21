@@ -1,6 +1,5 @@
 def cert_verify(self, conn, url, verify, cert):
     """Verify a certificate for a given connection."""
-
     if url.lower().startswith("https"):
         cert_loc = None
 

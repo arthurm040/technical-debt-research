@@ -14,6 +14,16 @@ Pydantic
 - Simplify all the classes from UrlConstraints in v2 (networks.py)
 - Consider some of the validation logic in networks.py
 
+Click
+- Update echo function to handle python 3 library-versions/click/0.1/click/utils.py
+- Convert v2 exceptions classes to cover MissingParameter, NoSuchOption, BadOptionUsage, BadArgumentUsage
+-
+
+Marshmallow
+-
+-
+-
+
 Prompt templates
 
 Requests

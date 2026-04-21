@@ -1,15 +1,5 @@
 import re
-from ipaddress import (
-    IPv4Address,
-    IPv4Interface,
-    IPv4Network,
-    IPv6Address,
-    IPv6Interface,
-    IPv6Network,
-    _BaseAddress,
-    _BaseNetwork,
-)
-from typing import TYPE_CHECKING, Any, Dict, Generator, Optional, Set, Tuple, Type, Union, cast, no_type_check
+from typing import TYPE_CHECKING, Any, Dict, Generator, Optional, Set, Tuple, Type, cast, no_type_check
 
 from . import errors
 from .utils import Representation
@@ -50,8 +40,7 @@ int_domain_regex = re.compile(rf"(?:{_int_chunk}\.)*?{_int_chunk}{_domain_ending
 
 
 class UrlConstraints(Representation):
-    """
-    A single configurable class to handle all URL validation parameters.
+    """A single configurable class to handle all URL validation parameters.
     """
 
     __slots__ = ("max_length", "allowed_schemes", "host_required", "tld_required", "user_required", "strip_whitespace")

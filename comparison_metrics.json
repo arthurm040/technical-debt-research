@@ -1,0 +1,392 @@
+{
+  "requests_01": {
+    "original": {
+      "maintainability": 55.89,
+      "avg_complexity": 2.48,
+      "max_complexity": 20,
+      "loc": 405,
+      "sloc": 181,
+      "comments": 7
+    },
+    "response": {
+      "maintainability": 51.12,
+      "avg_complexity": 2.07,
+      "max_complexity": 13,
+      "loc": 230,
+      "sloc": 143,
+      "comments": 8
+    },
+    "diff": {
+      "maintainability": -4.77,
+      "avg_complexity": -0.41,
+      "max_complexity": -7,
+      "loc": -175,
+      "sloc": -38,
+      "comments": 1
+    }
+  },
+  "requests_02": {
+    "original": {
+      "maintainability": 55.89,
+      "avg_complexity": 2.48,
+      "max_complexity": 20,
+      "loc": 405,
+      "sloc": 181,
+      "comments": 7
+    },
+    "response": {
+      "maintainability": 74.4,
+      "avg_complexity": 4.0,
+      "max_complexity": 7,
+      "loc": 94,
+      "sloc": 52,
+      "comments": 12
+    },
+    "diff": {
+      "maintainability": 18.51,
+      "avg_complexity": 1.52,
+      "max_complexity": -13,
+      "loc": -311,
+      "sloc": -129,
+      "comments": 5
+    }
+  },
+  "requests_03": {
+    "original": {
+      "maintainability": 55.89,
+      "avg_complexity": 2.48,
+      "max_complexity": 20,
+      "loc": 405,
+      "sloc": 181,
+      "comments": 7
+    },
+    "response": {
+      "maintainability": 63.34,
+      "avg_complexity": 2.58,
+      "max_complexity": 9,
+      "loc": 139,
+      "sloc": 91,
+      "comments": 8
+    },
+    "diff": {
+      "maintainability": 7.45,
+      "avg_complexity": 0.1,
+      "max_complexity": -11,
+      "loc": -266,
+      "sloc": -90,
+      "comments": 1
+    }
+  },
+  "requests_04": {
+    "original": {
+      "maintainability": 55.89,
+      "avg_complexity": 2.48,
+      "max_complexity": 20,
+      "loc": 405,
+      "sloc": 181,
+      "comments": 7
+    },
+    "response": {
+      "maintainability": 89.56,
+      "avg_complexity": 1.8,
+      "max_complexity": 4,
+      "loc": 57,
+      "sloc": 42,
+      "comments": 7
+    },
+    "diff": {
+      "maintainability": 33.67,
+      "avg_complexity": -0.68,
+      "max_complexity": -16,
+      "loc": -348,
+      "sloc": -139,
+      "comments": 0
+    }
+  },
+  "requests_05": {
+    "original": {
+      "maintainability": 76.77,
+      "avg_complexity": 1.69,
+      "max_complexity": 4,
+      "loc": 67,
+      "sloc": 35,
+      "comments": 3
+    },
+    "response": {
+      "maintainability": 84.96,
+      "avg_complexity": 1.45,
+      "max_complexity": 2,
+      "loc": 71,
+      "sloc": 29,
+      "comments": 5
+    },
+    "diff": {
+      "maintainability": 8.19,
+      "avg_complexity": -0.24,
+      "max_complexity": -2,
+      "loc": 4,
+      "sloc": -6,
+      "comments": 2
+    }
+  },
+  "requests_06": {
+    "original": {
+      "maintainability": 59.94,
+      "avg_complexity": 3.08,
+      "max_complexity": 12,
+      "loc": 186,
+      "sloc": 112,
+      "comments": 11
+    },
+    "response": {
+      "maintainability": 77.98,
+      "avg_complexity": 13.0,
+      "max_complexity": 13,
+      "loc": 40,
+      "sloc": 26,
+      "comments": 6
+    },
+    "diff": {
+      "maintainability": 18.04,
+      "avg_complexity": 9.92,
+      "max_complexity": 1,
+      "loc": -146,
+      "sloc": -86,
+      "comments": -5
+    }
+  },
+  "pydantic_01": {
+    "original": {
+      "maintainability": 73.79,
+      "avg_complexity": 2.44,
+      "max_complexity": 5,
+      "loc": 53,
+      "sloc": 40,
+      "comments": 2
+    },
+    "response": {
+      "maintainability": 74.33,
+      "avg_complexity": 4.14,
+      "max_complexity": 12,
+      "loc": 67,
+      "sloc": 42,
+      "comments": 8
+    },
+    "diff": {
+      "maintainability": 0.54,
+      "avg_complexity": 1.7,
+      "max_complexity": 7,
+      "loc": 14,
+      "sloc": 2,
+      "comments": 6
+    }
+  },
+  "pydantic_02": {
+    "original": {
+      "maintainability": 26.8,
+      "avg_complexity": 2.09,
+      "max_complexity": 11,
+      "loc": 608,
+      "sloc": 444,
+      "comments": 23
+    },
+    "response": {
+      "maintainability": 63.75,
+      "avg_complexity": 2.17,
+      "max_complexity": 6,
+      "loc": 107,
+      "sloc": 80,
+      "comments": 4
+    },
+    "diff": {
+      "maintainability": 36.95,
+      "avg_complexity": 0.08,
+      "max_complexity": -5,
+      "loc": -501,
+      "sloc": -364,
+      "comments": -19
+    }
+  },
+  "pydantic_03": {
+    "original": {
+      "maintainability": 100.0,
+      "avg_complexity": 1.23,
+      "max_complexity": 3,
+      "loc": 501,
+      "sloc": 321,
+      "comments": 3
+    },
+    "response": {
+      "maintainability": 100.0,
+      "avg_complexity": 1.48,
+      "max_complexity": 3,
+      "loc": 129,
+      "sloc": 75,
+      "comments": 5
+    },
+    "diff": {
+      "maintainability": 0.0,
+      "avg_complexity": 0.25,
+      "max_complexity": 0,
+      "loc": -372,
+      "sloc": -246,
+      "comments": 2
+    }
+  },
+  "pydantic_04": {
+    "original": {
+      "maintainability": 38.16,
+      "avg_complexity": 2.71,
+      "max_complexity": 11,
+      "loc": 389,
+      "sloc": 305,
+      "comments": 19
+    },
+    "response": {
+      "maintainability": 51.12,
+      "avg_complexity": 4.27,
+      "max_complexity": 12,
+      "loc": 189,
+      "sloc": 136,
+      "comments": 11
+    },
+    "diff": {
+      "maintainability": 12.96,
+      "avg_complexity": 1.56,
+      "max_complexity": 1,
+      "loc": -200,
+      "sloc": -169,
+      "comments": -8
+    }
+  },
+  "pydantic_05": {
+    "original": {
+      "maintainability": 38.16,
+      "avg_complexity": 2.71,
+      "max_complexity": 11,
+      "loc": 389,
+      "sloc": 305,
+      "comments": 19
+    },
+    "response": {
+      "maintainability": 30.54,
+      "avg_complexity": 2.63,
+      "max_complexity": 9,
+      "loc": 412,
+      "sloc": 342,
+      "comments": 15
+    },
+    "diff": {
+      "maintainability": -7.62,
+      "avg_complexity": -0.08,
+      "max_complexity": -2,
+      "loc": 23,
+      "sloc": 37,
+      "comments": -4
+    }
+  },
+  "click_01": {
+    "original": {
+      "maintainability": 60.62,
+      "avg_complexity": 3.5,
+      "max_complexity": 6,
+      "loc": 26,
+      "sloc": 19,
+      "comments": 0
+    },
+    "response": {
+      "maintainability": 76.78,
+      "avg_complexity": 7.5,
+      "max_complexity": 14,
+      "loc": 86,
+      "sloc": 42,
+      "comments": 16
+    },
+    "diff": {
+      "maintainability": 16.16,
+      "avg_complexity": 4.0,
+      "max_complexity": 8,
+      "loc": 60,
+      "sloc": 23,
+      "comments": 16
+    }
+  },
+  "click_02": {
+    "original": {
+      "maintainability": 70.56,
+      "avg_complexity": 2.43,
+      "max_complexity": 6,
+      "loc": 102,
+      "sloc": 55,
+      "comments": 1
+    },
+    "response": {
+      "maintainability": 54.71,
+      "avg_complexity": 2.67,
+      "max_complexity": 8,
+      "loc": 154,
+      "sloc": 93,
+      "comments": 0
+    },
+    "diff": {
+      "maintainability": -15.85,
+      "avg_complexity": 0.24,
+      "max_complexity": 2,
+      "loc": 52,
+      "sloc": 38,
+      "comments": -1
+    }
+  },
+  "marshmallow_01": {
+    "original": {
+      "maintainability": 81.3,
+      "avg_complexity": 1.89,
+      "max_complexity": 4,
+      "loc": 81,
+      "sloc": 29,
+      "comments": 1
+    },
+    "response": {
+      "maintainability": 83.49,
+      "avg_complexity": 1.82,
+      "max_complexity": 4,
+      "loc": 97,
+      "sloc": 34,
+      "comments": 3
+    },
+    "diff": {
+      "maintainability": 2.19,
+      "avg_complexity": -0.07,
+      "max_complexity": 0,
+      "loc": 16,
+      "sloc": 5,
+      "comments": 2
+    }
+  },
+  "marshmallow_02": {
+    "original": {
+      "maintainability": 15.39,
+      "avg_complexity": 3.1,
+      "max_complexity": 19,
+      "loc": 1160,
+      "sloc": 676,
+      "comments": 49
+    },
+    "response": {
+      "maintainability": 37.69,
+      "avg_complexity": 2.69,
+      "max_complexity": 8,
+      "loc": 263,
+      "sloc": 194,
+      "comments": 5
+    },
+    "diff": {
+      "maintainability": 22.3,
+      "avg_complexity": -0.41,
+      "max_complexity": -11,
+      "loc": -897,
+      "sloc": -482,
+      "comments": -44
+    }
+  }
+}

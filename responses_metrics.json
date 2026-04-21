@@ -1,288 +1,227 @@
 {
-  "requests_01": {
-    "original": {
-      "maintainability": 55.89,
-      "avg_complexity": 2.48,
-      "max_complexity": 20,
-      "loc": 405,
-      "sloc": 181,
-      "comments": 7
-    },
-    "response": {
-      "maintainability": 51.33,
-      "avg_complexity": 2.07,
-      "max_complexity": 13,
-      "loc": 232,
-      "sloc": 143,
-      "comments": 8
-    },
-    "diff": {
-      "maintainability": -4.56,
-      "avg_complexity": -0.41,
-      "max_complexity": -7,
-      "loc": -173,
-      "sloc": -38,
-      "comments": 1
+  "click_01": {
+    "maintainability": 76.78,
+    "avg_complexity": 7.5,
+    "max_complexity": 14,
+    "loc": 86,
+    "sloc": 42,
+    "comments": 16,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
-  "requests_02": {
-    "original": {
-      "maintainability": 55.89,
-      "avg_complexity": 2.48,
-      "max_complexity": 20,
-      "loc": 405,
-      "sloc": 181,
-      "comments": 7
-    },
-    "response": {
-      "maintainability": 74.4,
-      "avg_complexity": 4.0,
-      "max_complexity": 7,
-      "loc": 95,
-      "sloc": 52,
-      "comments": 12
-    },
-    "diff": {
-      "maintainability": 18.51,
-      "avg_complexity": 1.52,
-      "max_complexity": -13,
-      "loc": -310,
-      "sloc": -129,
-      "comments": 5
+  "click_02": {
+    "maintainability": 54.71,
+    "avg_complexity": 2.67,
+    "max_complexity": 8,
+    "loc": 154,
+    "sloc": 93,
+    "comments": 0,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
-  "requests_03": {
-    "original": {
-      "maintainability": 55.89,
-      "avg_complexity": 2.48,
-      "max_complexity": 20,
-      "loc": 405,
-      "sloc": 181,
-      "comments": 7
-    },
-    "response": {
-      "maintainability": 63.68,
-      "avg_complexity": 2.58,
-      "max_complexity": 9,
-      "loc": 140,
-      "sloc": 92,
-      "comments": 8
-    },
-    "diff": {
-      "maintainability": 7.79,
-      "avg_complexity": 0.1,
-      "max_complexity": -11,
-      "loc": -265,
-      "sloc": -89,
-      "comments": 1
+  "marshmallow_01": {
+    "maintainability": 83.49,
+    "avg_complexity": 1.82,
+    "max_complexity": 4,
+    "loc": 97,
+    "sloc": 34,
+    "comments": 3,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
-  "requests_04": {
-    "original": {
-      "maintainability": 55.89,
-      "avg_complexity": 2.48,
-      "max_complexity": 20,
-      "loc": 405,
-      "sloc": 181,
-      "comments": 7
-    },
-    "response": {
-      "maintainability": 89.56,
-      "avg_complexity": 1.8,
-      "max_complexity": 4,
-      "loc": 57,
-      "sloc": 42,
-      "comments": 7
-    },
-    "diff": {
-      "maintainability": 33.67,
-      "avg_complexity": -0.68,
-      "max_complexity": -16,
-      "loc": -348,
-      "sloc": -139,
-      "comments": 0
-    }
-  },
-  "requests_05": {
-    "original": {
-      "maintainability": 76.77,
-      "avg_complexity": 1.69,
-      "max_complexity": 4,
-      "loc": 67,
-      "sloc": 35,
-      "comments": 3
-    },
-    "response": {
-      "maintainability": 84.25,
-      "avg_complexity": 1.45,
-      "max_complexity": 2,
-      "loc": 73,
-      "sloc": 29,
-      "comments": 5
-    },
-    "diff": {
-      "maintainability": 7.48,
-      "avg_complexity": -0.24,
-      "max_complexity": -2,
-      "loc": 6,
-      "sloc": -6,
-      "comments": 2
-    }
-  },
-  "requests_06": {
-    "original": {
-      "maintainability": 59.94,
-      "avg_complexity": 3.08,
-      "max_complexity": 12,
-      "loc": 186,
-      "sloc": 112,
-      "comments": 11
-    },
-    "response": {
-      "maintainability": 77.98,
-      "avg_complexity": 13.0,
-      "max_complexity": 13,
-      "loc": 41,
-      "sloc": 26,
-      "comments": 6
-    },
-    "diff": {
-      "maintainability": 18.04,
-      "avg_complexity": 9.92,
-      "max_complexity": 1,
-      "loc": -145,
-      "sloc": -86,
-      "comments": -5
+  "marshmallow_02": {
+    "maintainability": 37.69,
+    "avg_complexity": 2.69,
+    "max_complexity": 8,
+    "loc": 263,
+    "sloc": 194,
+    "comments": 5,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
   "pydantic_01": {
-    "original": {
-      "maintainability": 73.79,
-      "avg_complexity": 2.44,
-      "max_complexity": 5,
-      "loc": 53,
-      "sloc": 40,
-      "comments": 2
-    },
-    "response": {
-      "maintainability": 75.07,
-      "avg_complexity": 4.14,
-      "max_complexity": 12,
-      "loc": 68,
-      "sloc": 42,
-      "comments": 8
-    },
-    "diff": {
-      "maintainability": 1.28,
-      "avg_complexity": 1.7,
-      "max_complexity": 7,
-      "loc": 15,
-      "sloc": 2,
-      "comments": 6
+    "maintainability": 74.33,
+    "avg_complexity": 4.14,
+    "max_complexity": 12,
+    "loc": 67,
+    "sloc": 42,
+    "comments": 8,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
   "pydantic_02": {
-    "original": {
-      "maintainability": 26.8,
-      "avg_complexity": 2.09,
-      "max_complexity": 11,
-      "loc": 608,
-      "sloc": 444,
-      "comments": 23
-    },
-    "response": {
-      "maintainability": 63.75,
-      "avg_complexity": 2.17,
-      "max_complexity": 6,
-      "loc": 107,
-      "sloc": 80,
-      "comments": 4
-    },
-    "diff": {
-      "maintainability": 36.95,
-      "avg_complexity": 0.08,
-      "max_complexity": -5,
-      "loc": -501,
-      "sloc": -364,
-      "comments": -19
+    "maintainability": 63.75,
+    "avg_complexity": 2.17,
+    "max_complexity": 6,
+    "loc": 107,
+    "sloc": 80,
+    "comments": 4,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
   "pydantic_03": {
-    "original": {
-      "maintainability": 100.0,
-      "avg_complexity": 1.23,
-      "max_complexity": 3,
-      "loc": 501,
-      "sloc": 321,
-      "comments": 3
-    },
-    "response": {
-      "maintainability": 100.0,
-      "avg_complexity": 1.48,
-      "max_complexity": 3,
-      "loc": 131,
-      "sloc": 76,
-      "comments": 5
-    },
-    "diff": {
-      "maintainability": 0.0,
-      "avg_complexity": 0.25,
-      "max_complexity": 0,
-      "loc": -370,
-      "sloc": -245,
-      "comments": 2
+    "maintainability": 100.0,
+    "avg_complexity": 1.48,
+    "max_complexity": 3,
+    "loc": 129,
+    "sloc": 75,
+    "comments": 5,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
   "pydantic_04": {
-    "original": {
-      "maintainability": 38.16,
-      "avg_complexity": 2.71,
-      "max_complexity": 11,
-      "loc": 389,
-      "sloc": 305,
-      "comments": 19
-    },
-    "response": {
-      "maintainability": 51.05,
-      "avg_complexity": 4.27,
-      "max_complexity": 12,
-      "loc": 200,
-      "sloc": 146,
-      "comments": 11
-    },
-    "diff": {
-      "maintainability": 12.89,
-      "avg_complexity": 1.56,
-      "max_complexity": 1,
-      "loc": -189,
-      "sloc": -159,
-      "comments": -8
+    "maintainability": 51.12,
+    "avg_complexity": 4.27,
+    "max_complexity": 12,
+    "loc": 189,
+    "sloc": 136,
+    "comments": 11,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   },
   "pydantic_05": {
-    "original": {
-      "maintainability": 38.16,
-      "avg_complexity": 2.71,
-      "max_complexity": 11,
-      "loc": 389,
-      "sloc": 305,
-      "comments": 19
-    },
-    "response": {
-      "maintainability": 30.54,
-      "avg_complexity": 2.63,
-      "max_complexity": 9,
-      "loc": 412,
-      "sloc": 342,
-      "comments": 15
-    },
-    "diff": {
-      "maintainability": -7.62,
-      "avg_complexity": -0.08,
-      "max_complexity": -2,
-      "loc": 23,
-      "sloc": 37,
-      "comments": -4
+    "maintainability": 30.54,
+    "avg_complexity": 2.63,
+    "max_complexity": 9,
+    "loc": 412,
+    "sloc": 342,
+    "comments": 15,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
+    }
+  },
+  "requests_01": {
+    "maintainability": 51.12,
+    "avg_complexity": 2.07,
+    "max_complexity": 13,
+    "loc": 230,
+    "sloc": 143,
+    "comments": 8,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
+    }
+  },
+  "requests_02": {
+    "maintainability": 74.4,
+    "avg_complexity": 4.0,
+    "max_complexity": 7,
+    "loc": 94,
+    "sloc": 52,
+    "comments": 12,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
+    }
+  },
+  "requests_03": {
+    "maintainability": 63.34,
+    "avg_complexity": 2.58,
+    "max_complexity": 9,
+    "loc": 139,
+    "sloc": 91,
+    "comments": 8,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
+    }
+  },
+  "requests_04": {
+    "maintainability": 89.56,
+    "avg_complexity": 1.8,
+    "max_complexity": 4,
+    "loc": 57,
+    "sloc": 42,
+    "comments": 7,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
+    }
+  },
+  "requests_05": {
+    "maintainability": 84.96,
+    "avg_complexity": 1.45,
+    "max_complexity": 2,
+    "loc": 71,
+    "sloc": 29,
+    "comments": 5,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
+    }
+  },
+  "requests_06": {
+    "maintainability": 77.98,
+    "avg_complexity": 13.0,
+    "max_complexity": 13,
+    "loc": 40,
+    "sloc": 26,
+    "comments": 6,
+    "tech_debt_markers": {
+      "TODO": 0,
+      "FIXME": 0,
+      "HACK": 0,
+      "XXX": 0,
+      "BUG": 0
     }
   }
 }

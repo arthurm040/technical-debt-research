@@ -55,6 +55,31 @@ PYDANTIC_PROMPT_ARRAY = [
     ),
 ]
 
+CLICK_PROMPT_ARRAY = [
+    (
+        "Update echo() in utils.py from v0 to v7. Start with a basic print wrapper and evolve it to handle Python 2 and 3 compatibility, error output, newline control and binary streams.",
+        "library-versions/click/0.1/click/utils.py",
+    ),
+    (
+        "Extend the exception hierarchy in exceptions.py from v2 to v7. Build on the existing UsageError and BadParameter classes to add MissingParameter, NoSuchOption, BadOptionUsage and BadArgumentUsage with appropriate formatting.",
+        "library-versions/click/2.0/click/exceptions.py",
+    ),
+]
+
+MARSHMALLOW_PROMPT_ARRAY = [
+    (
+        "Evolve ValidationError in exceptions.py from v1 to v4. Start with a basic message storage and evolve it to support normalized_messages and a structured messages dict with field-level error grouping.",
+        "library-versions/marshmallow/1.0.0/marshmallow/exceptions.py",
+    ),
+    (
+        "Move serialize and deserialize from standalone functions in fields.py into methods on the Field class from v1 to v3. Replace the external Marshaller and Unmarshaller callables with direct _serialize and _deserialize methods on Field.",
+        "library-versions/marshmallow/1.0.0/marshmallow/fields.py",
+    ),
+]
+
+
+
+
 
 def write_prompts(prefix, prompt_array, out_dir):
     os.makedirs(out_dir, exist_ok=True)
@@ -69,3 +94,6 @@ def write_prompts(prefix, prompt_array, out_dir):
 
 # write_prompts("requests", REQUESTS_PROMPT_ARRAY, "prompts_")
 # write_prompts("pydantic", PYDANTIC_PROMPT_ARRAY, "prompts_")
+
+write_prompts("click", CLICK_PROMPT_ARRAY, "prompts_")
+write_prompts("marshmallow", MARSHMALLOW_PROMPT_ARRAY, "prompts_")

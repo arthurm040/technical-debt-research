@@ -183,7 +183,7 @@ def analyze_files(directory):
                 else:
                     raise
             complexities = [r.complexity for r in cc_results]
-            results[py_file.name] = {
+            results[py_file.stem] = {
                 "maintainability": round(mi_score, 2),
                 "avg_complexity": round(sum(complexities) / len(complexities), 2) if complexities else 0,
                 "max_complexity": max(complexities) if complexities else 0,
@@ -192,7 +192,8 @@ def analyze_files(directory):
                 "comments": raw_metrics.comments,
                 "tech_debt_markers": find_tech_debt_markers(code),
             }
-        except Exception:
+        except Exception as e:
+            print(e)
             results[py_file.name] = {"error": "failed to analyze"}
     return results
 

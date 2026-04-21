@@ -1,5 +1,5 @@
 import re
-from typing import Annotated, Any, Dict, List, Optional, Pattern, Type, TypeVar, Union, cast
+from typing import Annotated, Any, List, Optional, Pattern, Type, TypeVar, Union
 
 T = TypeVar("T")
 

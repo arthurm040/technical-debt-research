@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 
-"""
-    requests.core
-    ~~~~~~~~~~~~~
-    This module implements the main Requests system.
+"""requests.core
+~~~~~~~~~~~~~
+This module implements the main Requests system.
 """
 
 import urllib
+
 import urllib2
-import Cookielib
 
 __title__ = 'requests'
 __version__ = '0.2.1'
@@ -118,10 +117,10 @@ class _Request(urllib2.Request):
 
 def get(url, params={}, headers={}, auth=None):
     r = Request()
-    r.method = 'GET';
-    r.url = url;
-    r.params = params;
-    r.headers = headers;
+    r.method = 'GET'
+    r.url = url
+    r.params = params
+    r.headers = headers
     r.auth = auth
     r.send()
     return r.response
@@ -129,10 +128,10 @@ def get(url, params={}, headers={}, auth=None):
 
 def post(url, data={}, headers={}, auth=None):
     r = Request()
-    r.method = 'POST';
-    r.url = url;
-    r.data = data;
-    r.headers = headers;
+    r.method = 'POST'
+    r.url = url
+    r.data = data
+    r.headers = headers
     r.auth = auth
     r.send()
     return r.response

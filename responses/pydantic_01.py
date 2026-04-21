@@ -29,8 +29,7 @@ class BaseModel(metaclass=MetaModel):
             setattr(self, name, value)
 
     def dict(self, include=None, exclude=None, by_alias=False):
-        """
-        Recursively converts the model and nested models into a dictionary.
+        """Recursively converts the model and nested models into a dictionary.
         """
         output = {}
 

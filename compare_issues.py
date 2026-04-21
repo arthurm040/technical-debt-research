@@ -1,9 +1,9 @@
 import json
-from create_files import REQUESTS_PROMPT_ARRAY, PYDANTIC_PROMPT_ARRAY
+import os
+from create_files import REQUESTS_PROMPT_ARRAY, PYDANTIC_PROMPT_ARRAY, CLICK_PROMPT_ARRAY, MARSHMALLOW_PROMPT_ARRAY
 
 TYPES = ["BUG", "CODE_SMELL", "VULNERABILITY"]
 SEVERITIES = ["BLOCKER", "CRITICAL", "MAJOR", "MINOR", "INFO"]
-comparison = {}
 
 with open("sonarqube_issues.json") as f:
     sonar_issues = json.load(f)
@@ -41,8 +41,11 @@ def compare(prefix, prompt_array):
     return results
 
 
-comparison.update(compare("requests", REQUESTS_PROMPT_ARRAY))
-comparison.update(compare("pydantic", PYDANTIC_PROMPT_ARRAY))
+existing = json.load(open("comparison_results.json")) if os.path.exists("comparison_results.json") else {}
+# comparison.update(compare("requests", REQUESTS_PROMPT_ARRAY))
+# comparison.update(compare("pydantic", PYDANTIC_PROMPT_ARRAY))
+existing.update(compare("click", CLICK_PROMPT_ARRAY))
+existing.update(compare("marshmallow", MARSHMALLOW_PROMPT_ARRAY))
 
 with open("comparison_results.json", "w") as f:
-    json.dump(comparison, f, indent=2)
+    json.dump(existing, f, indent=2)

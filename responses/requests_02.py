@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import urllib
-import urllib2
 
+import urllib2
 
 # ... (Previous imports and _Request class remain the same) ...
 
@@ -64,7 +64,6 @@ class Request(object):
 
     def send(self, anyway=False):
         """Sends the request using the modularized session methods."""
-
         if self.sent and not anyway:
             return False
 

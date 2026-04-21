@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""
-requests.structures
+"""requests.structures
 ~~~~~~~~~~~~~~~~~~~
 
 Data structures that power Requests.
@@ -11,8 +10,7 @@ import collections
 
 
 class CaseInsensitiveDict(collections.MutableMapping):
-    """
-    A case-insensitive ``dict``-like object.
+    """A case-insensitive ``dict``-like object.
 
     Implements all methods and operations of
     ``collections.MutableMapping`` as well as dict's ``copy``. Also

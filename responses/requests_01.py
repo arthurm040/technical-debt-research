@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
-"""
-    requests.core
-    ~~~~~~~~~~~~~
+"""requests.core
+~~~~~~~~~~~~~
 
-    This module implements the main Requests system.
+This module implements the main Requests system.
 
-    :copyright: (c) 2011 by Kenneth Reitz.
-    :license: ISC, see LICENSE for more details.
+:copyright: (c) 2011 by Kenneth Reitz.
+:license: ISC, see LICENSE for more details.
 """
 
 import urllib
-import urllib2
 
+import urllib2
 
 __title__ = 'requests'
 __version__ = '0.2.1'
@@ -93,7 +92,7 @@ class Request(object):
 
     def __setattr__(self, name, value):
        if (name == 'method') and (value):
-          if not value in self._METHODS:
+          if value not in self._METHODS:
              raise InvalidMethod("Method %s not supported." % value)
 
        object.__setattr__(self, name, value)
@@ -116,7 +115,6 @@ class Request(object):
 
     def send(self, anyway=False):
        """Sends the request. Returns True if successful, False if not."""
-
        self._checks()
        success = False
 

@@ -394,5 +394,149 @@
       "MINOR": 0,
       "INFO": 0
     }
+  },
+  "click_01": {
+    "task": "Update echo() in utils.py from v0 to v7. Start with a basic print wrapper and evolve it to handle Python 2 and 3 compatibility, error output, newline control and binary streams.",
+    "original": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "response": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 1,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    }
+  },
+  "click_02": {
+    "task": "Extend the exception hierarchy in exceptions.py from v2 to v7. Build on the existing UsageError and BadParameter classes to add MissingParameter, NoSuchOption, BadOptionUsage and BadArgumentUsage with appropriate formatting.",
+    "original": {
+      "total": 1,
+      "BUG": 0,
+      "CODE_SMELL": 1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 1,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "response": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -1,
+      "BUG": 0,
+      "CODE_SMELL": -1,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": -1,
+      "MINOR": 0,
+      "INFO": 0
+    }
+  },
+  "marshmallow_01": {
+    "task": "Evolve ValidationError in exceptions.py from v1 to v4. Start with a basic message storage and evolve it to support normalized_messages and a structured messages dict with field-level error grouping.",
+    "original": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "response": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    },
+    "diff": {
+      "total": 0,
+      "BUG": 0,
+      "CODE_SMELL": 0,
+      "VULNERABILITY": 0,
+      "BLOCKER": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0,
+      "INFO": 0
+    }
+  },
+  "marshmallow_02": {
+    "task": "Move serialize and deserialize from standalone functions in fields.py into methods on the Field class from v1 to v3. Replace the external Marshaller and Unmarshaller callables with direct _serialize and _deserialize methods on Field.",
+    "original": {
+      "total": 10,
+      "BUG": 2,
+      "CODE_SMELL": 8,
+      "VULNERABILITY": 0,
+      "BLOCKER": 2,
+      "CRITICAL": 2,
+      "MAJOR": 3,
+      "MINOR": 3,
+      "INFO": 0
+    },
+    "response": {
+      "total": 8,
+      "BUG": 5,
+      "CODE_SMELL": 3,
+      "VULNERABILITY": 0,
+      "BLOCKER": 5,
+      "CRITICAL": 0,
+      "MAJOR": 1,
+      "MINOR": 2,
+      "INFO": 0
+    },
+    "diff": {
+      "total": -2,
+      "BUG": 3,
+      "CODE_SMELL": -5,
+      "VULNERABILITY": 0,
+      "BLOCKER": 3,
+      "CRITICAL": -2,
+      "MAJOR": -2,
+      "MINOR": -1,
+      "INFO": 0
+    }
   }
 }
